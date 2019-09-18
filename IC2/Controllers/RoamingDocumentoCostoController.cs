@@ -1,4 +1,5 @@
-﻿using System;
+﻿using IC2.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -18,7 +19,9 @@ namespace IC2.Controllers
         {
             
             object respuesta = null;
-            
+
+            RoamingDocumentoCosto entidad = new RoamingDocumentoCosto();
+
 
             return Json(respuesta, JsonRequestBehavior.AllowGet);
         }

@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="ICPruebaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="ICPruebaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Acceso">
           <Key>
             <PropertyRef Name="Id" />
@@ -78,8 +78,8 @@
           <Property Name="Activo" Type="int" />
           <Property Name="Id_LineaNegocio" Type="int" />
         </EntityType>
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'ICPrueba.dbo.AjusNcRealVsDevROM' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'ICPrueba.dbo.AjusNcRealVsDevROM' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
         <EntityType Name="AjusNcRealVsDevROM">
           <Key>
             <PropertyRef Name="Id" />
@@ -198,8 +198,8 @@ warning 6002: The table/view 'ICPrueba.dbo.AjusNcRealVsDevROM' does not have a p
           <Property Name="Activo" Type="int" Nullable="false" />
           <Property Name="Id_LineaNegocio" Type="int" Nullable="false" />
         </EntityType>
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'ICPrueba.dbo.CancelacionProvROM' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'ICPrueba.dbo.CancelacionProvROM' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
         <EntityType Name="CancelacionProvROM">
           <Key>
             <PropertyRef Name="Id" />
@@ -219,8 +219,8 @@ warning 6002: The table/view 'ICPrueba.dbo.CancelacionProvROM' does not have a p
           <Property Name="No_DOC SAP" Type="int" />
           <Property Name="GRUPO" Type="varchar" MaxLength="50" />
         </EntityType>
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'ICPrueba.dbo.CancelacProvTrafIngresoROM' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'ICPrueba.dbo.CancelacProvTrafIngresoROM' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
         <EntityType Name="CancelacProvTrafIngresoROM">
           <Key>
             <PropertyRef Name="Id" />
@@ -233,8 +233,8 @@ warning 6002: The table/view 'ICPrueba.dbo.CancelacProvTrafIngresoROM' does not 
           <Property Name="DevengoPendEmitir_FechaProvisionIngresoPendienteEmitir" Type="decimal" Precision="12" Scale="6" />
           <Property Name="DevengoAcumulado_AFechaCierre" Type="decimal" Precision="12" Scale="6" />
         </EntityType>
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'ICPrueba.dbo.CancProvTarPerAnteROM' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'ICPrueba.dbo.CancProvTarPerAnteROM' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
         <EntityType Name="CancProvTarPerAnteROM">
           <Key>
             <PropertyRef Name="Id" />
@@ -343,8 +343,8 @@ warning 6002: The table/view 'ICPrueba.dbo.CancProvTarPerAnteROM' does not have 
           <Property Name="tipoCambio" Type="decimal" Precision="18" Scale="6" />
           <Property Name="lineaNegocio" Type="int" Nullable="false" />
         </EntityType>
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'ICPrueba.dbo.CierreIngresosROM' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'ICPrueba.dbo.CierreIngresosROM' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
         <EntityType Name="CierreIngresosROM">
           <Key>
             <PropertyRef Name="Id" />
@@ -491,8 +491,8 @@ warning 6002: The table/view 'ICPrueba.dbo.CierreIngresosROM' does not have a pr
           <Property Name="sobrecargo" Type="decimal" Precision="18" Scale="6" />
           <Property Name="estatus" Type="int" />
         </EntityType>
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'ICPrueba.dbo.DataIngresosROM' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'ICPrueba.dbo.DataIngresosROM' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
         <EntityType Name="DataIngresosROM">
           <Key>
             <PropertyRef Name="Id" />
@@ -723,8 +723,8 @@ warning 6002: The table/view 'ICPrueba.dbo.DataIngresosROM' does not have a prim
           <Property Name="Activo" Type="int" />
           <Property Name="Id_LineaNegocio" Type="int" />
         </EntityType>
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'ICPrueba.dbo.DevAcumTraficoIngresoROM' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'ICPrueba.dbo.DevAcumTraficoIngresoROM' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
         <EntityType Name="DevAcumTraficoIngresoROM">
           <Key>
             <PropertyRef Name="Id" />
@@ -900,8 +900,8 @@ warning 6002: The table/view 'ICPrueba.dbo.DevAcumTraficoIngresoROM' does not ha
           <Property Name="Activo" Type="int" />
           <Property Name="Id_LineaNegocio" Type="int" />
         </EntityType>
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'ICPrueba.dbo.FacturaTarifaROM' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'ICPrueba.dbo.FacturaTarifaROM' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
         <EntityType Name="FacturaTarifaROM">
           <Key>
             <PropertyRef Name="Id" />
@@ -918,8 +918,8 @@ warning 6002: The table/view 'ICPrueba.dbo.FacturaTarifaROM' does not have a pri
           <Property Name="TC" Type="decimal" Precision="12" Scale="6" />
           <Property Name="MXN" Type="decimal" Precision="12" Scale="6" />
         </EntityType>
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'ICPrueba.dbo.FacturaTraficoROM' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'ICPrueba.dbo.FacturaTraficoROM' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
         <EntityType Name="FacturaTraficoROM">
           <Key>
             <PropertyRef Name="Id" />
@@ -1303,8 +1303,8 @@ warning 6002: The table/view 'ICPrueba.dbo.FacturaTraficoROM' does not have a pr
           <Property Name="Activo" Type="int" />
           <Property Name="Id_LineaNegocio" Type="int" />
         </EntityType>
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'ICPrueba.dbo.HPolizasRechazo' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'ICPrueba.dbo.HPolizasRechazo' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
         <EntityType Name="HPolizasRechazo">
           <Key>
             <PropertyRef Name="Id" />
@@ -1321,8 +1321,8 @@ warning 6002: The table/view 'ICPrueba.dbo.HPolizasRechazo' does not have a prim
           <Property Name="PolizaGenerada" Type="bit" />
           <Property Name="FechaHistorico" Type="datetime" />
         </EntityType>
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'ICPrueba.dbo.LineaArchivo1' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'ICPrueba.dbo.LineaArchivo1' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
         <EntityType Name="LineaArchivo1">
           <Key>
             <PropertyRef Name="IdLinea1" />
@@ -1349,8 +1349,8 @@ warning 6002: The table/view 'ICPrueba.dbo.LineaArchivo1' does not have a primar
           <Property Name="CalculoAut" Type="varchar" MaxLength="20" />
           <Property Name="Sentido" Type="varchar" MaxLength="20" />
         </EntityType>
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'ICPrueba.dbo.LineaArchivo1Roaming' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'ICPrueba.dbo.LineaArchivo1Roaming' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
         <EntityType Name="LineaArchivo1Roaming">
           <Key>
             <PropertyRef Name="IdLinea1" />
@@ -1442,8 +1442,8 @@ warning 6002: The table/view 'ICPrueba.dbo.LineaArchivo1Roaming' does not have a
           <Property Name="ASIENTO" Type="varchar" MaxLength="30" />
           <Property Name="Sentido" Type="varchar" MaxLength="30" />
         </EntityType>
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'ICPrueba.dbo.LineaArchivo2Roaming' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'ICPrueba.dbo.LineaArchivo2Roaming' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
         <EntityType Name="LineaArchivo2Roaming">
           <Key>
             <PropertyRef Name="IdLinea2" />
@@ -1578,8 +1578,8 @@ warning 6002: The table/view 'ICPrueba.dbo.LineaArchivo2Roaming' does not have a
           <Property Name="Activo" Type="int" Nullable="false" />
           <Property Name="Id_LineaNegocio" Type="int" />
         </EntityType>
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'ICPrueba.dbo.NCTarifaROM' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'ICPrueba.dbo.NCTarifaROM' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
         <EntityType Name="NCTarifaROM">
           <Key>
             <PropertyRef Name="Id" />
@@ -1596,8 +1596,8 @@ warning 6002: The table/view 'ICPrueba.dbo.NCTarifaROM' does not have a primary 
           <Property Name="TC" Type="decimal" Precision="12" Scale="6" />
           <Property Name="MXN" Type="decimal" Precision="12" Scale="6" />
         </EntityType>
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'ICPrueba.dbo.NCTraficoROM' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'ICPrueba.dbo.NCTraficoROM' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
         <EntityType Name="NCTraficoROM">
           <Key>
             <PropertyRef Name="Id" />
@@ -1710,8 +1710,8 @@ warning 6002: The table/view 'ICPrueba.dbo.NCTraficoROM' does not have a primary
           <Property Name="month" Type="int" />
           <Property Name="year" Type="int" />
         </EntityType>
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'ICPrueba.dbo.Polizas' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'ICPrueba.dbo.Polizas' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
         <EntityType Name="Polizas">
           <Key>
             <PropertyRef Name="Id" />
@@ -1736,8 +1736,8 @@ warning 6002: The table/view 'ICPrueba.dbo.Polizas' does not have a primary key 
           <Property Name="Reprocesado" Type="varchar" MaxLength="50" />
           <Property Name="PolizaGenerada" Type="bit" />
         </EntityType>
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'ICPrueba.dbo.PolizasRoaming' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'ICPrueba.dbo.PolizasRoaming' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
         <EntityType Name="PolizasRoaming">
           <Key>
             <PropertyRef Name="Id" />
@@ -1783,8 +1783,8 @@ warning 6002: The table/view 'ICPrueba.dbo.PolizasRoaming' does not have a prima
           <Property Name="margen" Type="int" />
           <Property Name="fee_offnet" Type="decimal" Precision="18" Scale="2" />
         </EntityType>
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'ICPrueba.dbo.ProvTarAcumMesesAnteROM' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'ICPrueba.dbo.ProvTarAcumMesesAnteROM' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
         <EntityType Name="ProvTarAcumMesesAnteROM">
           <Key>
             <PropertyRef Name="Id" />
@@ -1802,8 +1802,8 @@ warning 6002: The table/view 'ICPrueba.dbo.ProvTarAcumMesesAnteROM' does not hav
           <Property Name="ProvNcTarifaMXN" Type="decimal" Precision="12" Scale="6" />
           <Property Name="ProvIngresoTarifaMXN" Type="decimal" Precision="12" Scale="6" />
         </EntityType>
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'ICPrueba.dbo.PROVTARIFA_MesAnteriorROM' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'ICPrueba.dbo.PROVTARIFA_MesAnteriorROM' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
         <EntityType Name="PROVTARIFA_MesAnteriorROM">
           <Key>
             <PropertyRef Name="Id" />
@@ -2129,8 +2129,72 @@ warning 6002: The table/view 'ICPrueba.dbo.PROVTARIFA_MesAnteriorROM' does not h
           <Property Name="tipoCambio" Type="decimal" Precision="24" Scale="6" />
           <Property Name="lineaNegocio" Type="int" Nullable="false" />
         </EntityType>
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'ICPrueba.dbo.SABANA_PROV_TAR_ROM' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="RoamingCancelacionCosto">
+          <Key>
+            <PropertyRef Name="IdCancelacionCosto" />
+          </Key>
+          <Property Name="IdCancelacionCosto" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="BanderaConcepto" Type="varchar" MaxLength="100" />
+          <Property Name="NumeroProvision" Type="varchar" MaxLength="100" />
+          <Property Name="CuentaContable" Type="varchar" MaxLength="100" />
+          <Property Name="Indat" Type="varchar" MaxLength="100" />
+          <Property Name="Concepto" Type="varchar" MaxLength="100" />
+          <Property Name="Grupo" Type="varchar" MaxLength="100" />
+          <Property Name="Acreedor" Type="varchar" MaxLength="100" />
+          <Property Name="MontoProvision" Type="varchar" MaxLength="100" />
+          <Property Name="Moneda" Type="varchar" MaxLength="100" />
+          <Property Name="Periodo" Type="varchar" MaxLength="100" />
+          <Property Name="Tipo" Type="varchar" MaxLength="100" />
+          <Property Name="NumeroDocumentoSap" Type="varchar" MaxLength="100" />
+          <Property Name="FolioDocumento" Type="varchar" MaxLength="100" />
+          <Property Name="TipoCambioProvision" Type="varchar" MaxLength="100" />
+          <Property Name="ImporteMxn" Type="varchar" MaxLength="100" />
+          <Property Name="ImporteFactura" Type="varchar" MaxLength="100" />
+          <Property Name="DiferenciaProvisionFactura" Type="varchar" MaxLength="100" />
+          <Property Name="TipoCambioFactura" Type="varchar" MaxLength="100" />
+          <Property Name="ExcesoProvisionMxn" Type="varchar" MaxLength="100" />
+          <Property Name="InsuficienciaProvisionMxn" Type="varchar" MaxLength="100" />
+          <Property Name="Activo" Type="varchar" MaxLength="1" />
+          <Property Name="LineaNegocio" Type="varchar" MaxLength="1" />
+          <Property Name="FechaCarga" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="RoamingDocumentoCosto">
+          <Key>
+            <PropertyRef Name="IdDocumentoCosto" />
+          </Key>
+          <Property Name="IdDocumentoCosto" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Anio" Type="varchar" MaxLength="100" />
+          <Property Name="FechaContable" Type="varchar" MaxLength="100" />
+          <Property Name="FechaConsumo" Type="varchar" MaxLength="100" />
+          <Property Name="Compania" Type="varchar" MaxLength="100" />
+          <Property Name="Servicio" Type="varchar" MaxLength="100" />
+          <Property Name="Grupo" Type="varchar" MaxLength="100" />
+          <Property Name="IdOperador" Type="varchar" MaxLength="100" />
+          <Property Name="NombreOperador" Type="varchar" MaxLength="100" />
+          <Property Name="Acreedor" Type="varchar" MaxLength="100" />
+          <Property Name="Material" Type="varchar" MaxLength="100" />
+          <Property Name="Trafico" Type="varchar" MaxLength="100" />
+          <Property Name="Iva" Type="varchar" MaxLength="100" />
+          <Property Name="PorcentajeIva" Type="varchar" MaxLength="100" />
+          <Property Name="Moneda" Type="varchar" MaxLength="100" />
+          <Property Name="Minutos" Type="varchar" MaxLength="100" />
+          <Property Name="Tarifa" Type="varchar" MaxLength="100" />
+          <Property Name="Monto" Type="varchar" MaxLength="100" />
+          <Property Name="MontoFacturado" Type="varchar" MaxLength="100" />
+          <Property Name="FechaFactura" Type="varchar" MaxLength="100" />
+          <Property Name="FolioDocumento" Type="varchar" MaxLength="100" />
+          <Property Name="TipoCambio" Type="varchar" MaxLength="100" />
+          <Property Name="MontoMxn" Type="varchar" MaxLength="100" />
+          <Property Name="CuentaContable" Type="varchar" MaxLength="100" />
+          <Property Name="ClaseDocumento" Type="varchar" MaxLength="100" />
+          <Property Name="ClaseDocumentoSap" Type="varchar" MaxLength="100" />
+          <Property Name="NumeroDocumentoSap" Type="varchar" MaxLength="100" />
+          <Property Name="Activo" Type="varchar" MaxLength="1" />
+          <Property Name="LineaNegocio" Type="varchar" MaxLength="1" />
+          <Property Name="FechaCarga" Type="datetime" Nullable="false" />
+        </EntityType>
+        <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'ICPrueba.dbo.SABANA_PROV_TAR_ROM' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
         <EntityType Name="SABANA_PROV_TAR_ROM">
           <Key>
             <PropertyRef Name="Id" />
@@ -2358,8 +2422,8 @@ warning 6002: The table/view 'ICPrueba.dbo.SABANA_PROV_TAR_ROM' does not have a 
           <Property Name="estatus" Type="varchar" MaxLength="100" Nullable="false" />
           <Property Name="cuenta_Fluctuacion" Type="int" Nullable="false" />
         </EntityType>
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'ICPrueba.dbo.v_costos' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'ICPrueba.dbo.v_costos' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
         <EntityType Name="v_costos">
           <Key>
             <PropertyRef Name="Id" />
@@ -2387,8 +2451,8 @@ warning 6002: The table/view 'ICPrueba.dbo.v_costos' does not have a primary key
           <Property Name="fecha_proceso" Type="date" />
           <Property Name="fecha_contable" Type="date" />
         </EntityType>
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'ICPrueba.dbo.v_ingresos' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'ICPrueba.dbo.v_ingresos' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
         <EntityType Name="v_ingresos">
           <Key>
             <PropertyRef Name="Id" />
@@ -3150,6 +3214,8 @@ warning 6002: The table/view 'ICPrueba.dbo.v_ingresos' does not have a primary k
           <EntitySet Name="PXQIngresosROM" EntityType="Self.PXQIngresosROM" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="PXQIngresosROM_B" EntityType="Self.PXQIngresosROM_B" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="PXQSMSLDI" EntityType="Self.PXQSMSLDI" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="RoamingCancelacionCosto" EntityType="Self.RoamingCancelacionCosto" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="RoamingDocumentoCosto" EntityType="Self.RoamingDocumentoCosto" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Servicio" EntityType="Self.Servicio" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Sociedad" EntityType="Self.Sociedad" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Submenu" EntityType="Self.Submenu" Schema="dbo" store:Type="Tables" />
@@ -3749,8 +3815,7 @@ warning 6002: The table/view 'ICPrueba.dbo.v_ingresos' does not have a primary k
             <End Role="Trafico" EntitySet="Trafico" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="ICPruebaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -6853,14 +6918,14 @@ warning 6002: The table/view 'ICPrueba.dbo.v_ingresos' does not have a primary k
             <Parameter Name="pDelimitador" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="ProvisionesLDI">
-            <Parameter Name="direccion" Mode="In" Type="String" />
+          <Parameter Name="direccion" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="sp_Actualiza_Ajuste_provNcRegistrada" />
           <FunctionImport Name="sp_cancelacionCostoROM" ReturnType="Collection(ICPruebaModel.sp_cancelacionCostoROM_Result)">
-            <Parameter Name="periodo" Mode="In" Type="DateTime" />
+          <Parameter Name="periodo" Mode="In" Type="DateTime" />
           </FunctionImport>
           <FunctionImport Name="sp_cancelacionIngresoRom" ReturnType="Collection(Decimal)">
-            <Parameter Name="periodo" Mode="In" Type="DateTime" />
+          <Parameter Name="periodo" Mode="In" Type="DateTime" />
           </FunctionImport>
           <FunctionImport Name="sp_DataCostos_INS">
             <Parameter Name="fecha_periodo" Mode="In" Type="DateTime" />
@@ -6891,7 +6956,7 @@ warning 6002: The table/view 'ICPrueba.dbo.v_ingresos' does not have a primary k
             <Parameter Name="nombretabla" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="sp_GestionAcuerdos_Select" ReturnType="Collection(ICPruebaModel.sp_GestionAcuerdos_Select_Result)">
-            <Parameter Name="fecha_periodo" Mode="In" Type="DateTime" />
+          <Parameter Name="fecha_periodo" Mode="In" Type="DateTime" />
           </FunctionImport>
           <FunctionImport Name="sp_ic_buscaIdsCargaNC" ReturnType="Collection(ICPruebaModel.sp_ic_buscaIdsCargaNC_Result)">
             <Parameter Name="sociedad" Mode="In" Type="String" />
@@ -6911,23 +6976,23 @@ warning 6002: The table/view 'ICPrueba.dbo.v_ingresos' does not have a primary k
           </FunctionImport>
           <FunctionImport Name="sp_ic_feetiws" />
           <FunctionImport Name="sp_ic_obtieneIdGrupo" ReturnType="Collection(ICPruebaModel.sp_ic_obtieneIdGrupo_Result)">
-            <Parameter Name="Grupo" Mode="In" Type="String" />
+          <Parameter Name="Grupo" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="sp_ic_obtieneIdsOperadorGrupo" ReturnType="Collection(ICPruebaModel.sp_ic_obtieneIdsOperadorGrupo_Result)">
-            <Parameter Name="parametro" Mode="In" Type="String" />
+          <Parameter Name="parametro" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="sp_ic_obtienePeriodo" />
           <FunctionImport Name="sp_InsertarPXQCostosROM">
-            <Parameter Name="Fecha" Mode="In" Type="DateTime" />
+          <Parameter Name="Fecha" Mode="In" Type="DateTime" />
           </FunctionImport>
           <FunctionImport Name="sp_InsertarPXQCostosROM_B">
-            <Parameter Name="Fecha" Mode="In" Type="DateTime" />
+          <Parameter Name="Fecha" Mode="In" Type="DateTime" />
           </FunctionImport>
           <FunctionImport Name="sp_InsertarPXQIngresosROM">
-            <Parameter Name="Fecha" Mode="In" Type="DateTime" />
+          <Parameter Name="Fecha" Mode="In" Type="DateTime" />
           </FunctionImport>
           <FunctionImport Name="sp_InsertarPXQIngresosROM_B">
-            <Parameter Name="Fecha" Mode="In" Type="DateTime" />
+          <Parameter Name="Fecha" Mode="In" Type="DateTime" />
           </FunctionImport>
           <FunctionImport Name="sp_provisionCosto">
             <Parameter Name="periodo" Mode="In" Type="DateTime" />
@@ -6935,7 +7000,7 @@ warning 6002: The table/view 'ICPrueba.dbo.v_ingresos' does not have a primary k
             <Parameter Name="nombretabla" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="sp_provisionFEETIWS">
-            <Parameter Name="periodo" Mode="In" Type="DateTime" />
+          <Parameter Name="periodo" Mode="In" Type="DateTime" />
           </FunctionImport>
           <FunctionImport Name="sp_provisionIngreso">
             <Parameter Name="periodo" Mode="In" Type="DateTime" />
@@ -6948,7 +7013,7 @@ warning 6002: The table/view 'ICPrueba.dbo.v_ingresos' does not have a primary k
             <Parameter Name="nombretabla" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="sp_RecalculoGA_Insert">
-            <Parameter Name="fecha_periodo" Mode="In" Type="DateTime" />
+          <Parameter Name="fecha_periodo" Mode="In" Type="DateTime" />
           </FunctionImport>
           <FunctionImport Name="sp_ValidaRelaciones" ReturnType="Collection(ICPruebaModel.sp_ValidaRelaciones_Result)">
             <Parameter Name="vcTabla" Mode="In" Type="String" />
@@ -6959,7 +7024,7 @@ warning 6002: The table/view 'ICPrueba.dbo.v_ingresos' does not have a primary k
             <Parameter Name="lineaNegocio" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="SPCargaRoaming">
-            <Parameter Name="archivo" Mode="In" Type="String" />
+          <Parameter Name="archivo" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="spValidaAjustesObj" ReturnType="Collection(ICPruebaModel.spValidaAjustesObj_Result)">
             <Parameter Name="sentido" Mode="In" Type="String" />
@@ -7031,14 +7096,14 @@ warning 6002: The table/view 'ICPrueba.dbo.v_ingresos' does not have a primary k
             <Parameter Name="Sentido" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="usp_CancelarPoliza">
-            <Parameter Name="IdDevengo" Mode="In" Type="Int32" />
+          <Parameter Name="IdDevengo" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="usp_ContarPolizasGeneradas" ReturnType="Collection(Int32)">
             <Parameter Name="Mes" Mode="In" Type="Int32" />
             <Parameter Name="Ano" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="usp_DatosCabeceraRegistro">
-            <Parameter Name="sentido" Mode="In" Type="String" />
+          <Parameter Name="sentido" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="usp_InsertarArchivoLinea2" />
           <FunctionImport Name="usp_InsertarDatosPolizaSAP">
@@ -7057,7 +7122,7 @@ warning 6002: The table/view 'ICPrueba.dbo.v_ingresos' does not have a primary k
           <FunctionImport Name="usp_InsertarHistoricoRechazoPolizas" />
           <FunctionImport Name="usp_InsertarLinea1" />
           <FunctionImport Name="usp_ListadoPolizas">
-            <Parameter Name="Periodo" Mode="In" Type="DateTime" />
+          <Parameter Name="Periodo" Mode="In" Type="DateTime" />
           </FunctionImport>
           <FunctionImport Name="usp_ListadoPolizasFiltro" ReturnType="Collection(ICPruebaModel.usp_ListadoPolizasFiltro_Result)">
             <Parameter Name="Mes" Mode="In" Type="Int32" />
@@ -7072,6 +7137,8 @@ warning 6002: The table/view 'ICPrueba.dbo.v_ingresos' does not have a primary k
             <Parameter Name="Ano" Mode="In" Type="Int32" />
             <Parameter Name="Tipo" Mode="In" Type="Int32" />
           </FunctionImport>
+          <EntitySet Name="RoamingCancelacionCosto" EntityType="ICPruebaModel.RoamingCancelacionCosto" />
+          <EntitySet Name="RoamingDocumentoCosto" EntityType="ICPruebaModel.RoamingDocumentoCosto" />
         </EntityContainer>
         <ComplexType Name="sp_cancelacionCostoROM_Result">
           <Property Type="Decimal" Name="RESULTADO" Nullable="true" Precision="23" Scale="6" />
@@ -7252,6 +7319,70 @@ warning 6002: The table/view 'ICPrueba.dbo.v_ingresos' does not have a primary k
           <Property Type="Decimal" Name="AjustesExtraordinarios" Nullable="true" Precision="38" Scale="6" />
           <Property Type="Decimal" Name="ImporteNeto" Nullable="true" Precision="38" Scale="6" />
         </ComplexType>
+        <EntityType Name="RoamingCancelacionCosto">
+          <Key>
+            <PropertyRef Name="IdCancelacionCosto" />
+          </Key>
+          <Property Name="IdCancelacionCosto" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="BanderaConcepto" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="NumeroProvision" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="CuentaContable" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Indat" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Concepto" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Grupo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Acreedor" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="MontoProvision" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Moneda" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Periodo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Tipo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="NumeroDocumentoSap" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="FolioDocumento" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="TipoCambioProvision" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="ImporteMxn" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="ImporteFactura" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="DiferenciaProvisionFactura" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="TipoCambioFactura" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="ExcesoProvisionMxn" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="InsuficienciaProvisionMxn" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Activo" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="LineaNegocio" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="FechaCarga" Type="DateTime" Nullable="false" Precision="3" />
+        </EntityType>
+        <EntityType Name="RoamingDocumentoCosto">
+          <Key>
+            <PropertyRef Name="IdDocumentoCosto" />
+          </Key>
+          <Property Name="IdDocumentoCosto" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Anio" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="FechaContable" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="FechaConsumo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Compania" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Servicio" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Grupo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="IdOperador" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="NombreOperador" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Acreedor" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Material" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Trafico" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Iva" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="PorcentajeIva" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Moneda" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Minutos" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Tarifa" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Monto" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="MontoFacturado" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="FechaFactura" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="FolioDocumento" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="TipoCambio" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="MontoMxn" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="CuentaContable" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="ClaseDocumento" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="ClaseDocumentoSap" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="NumeroDocumentoSap" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Activo" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="LineaNegocio" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="FechaCarga" Type="DateTime" Nullable="false" Precision="3" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -9982,6 +10113,72 @@ warning 6002: The table/view 'ICPrueba.dbo.v_ingresos' does not have a primary k
             </ResultMapping>
           </FunctionImportMapping>
           <FunctionImportMapping FunctionImportName="uspListadoArchivosSAP" FunctionName="ICPruebaModel.Store.uspListadoArchivosSAP" />
+          <EntitySetMapping Name="RoamingCancelacionCosto">
+            <EntityTypeMapping TypeName="ICPruebaModel.RoamingCancelacionCosto">
+              <MappingFragment StoreEntitySet="RoamingCancelacionCosto">
+                <ScalarProperty Name="FechaCarga" ColumnName="FechaCarga" />
+                <ScalarProperty Name="LineaNegocio" ColumnName="LineaNegocio" />
+                <ScalarProperty Name="Activo" ColumnName="Activo" />
+                <ScalarProperty Name="InsuficienciaProvisionMxn" ColumnName="InsuficienciaProvisionMxn" />
+                <ScalarProperty Name="ExcesoProvisionMxn" ColumnName="ExcesoProvisionMxn" />
+                <ScalarProperty Name="TipoCambioFactura" ColumnName="TipoCambioFactura" />
+                <ScalarProperty Name="DiferenciaProvisionFactura" ColumnName="DiferenciaProvisionFactura" />
+                <ScalarProperty Name="ImporteFactura" ColumnName="ImporteFactura" />
+                <ScalarProperty Name="ImporteMxn" ColumnName="ImporteMxn" />
+                <ScalarProperty Name="TipoCambioProvision" ColumnName="TipoCambioProvision" />
+                <ScalarProperty Name="FolioDocumento" ColumnName="FolioDocumento" />
+                <ScalarProperty Name="NumeroDocumentoSap" ColumnName="NumeroDocumentoSap" />
+                <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+                <ScalarProperty Name="Periodo" ColumnName="Periodo" />
+                <ScalarProperty Name="Moneda" ColumnName="Moneda" />
+                <ScalarProperty Name="MontoProvision" ColumnName="MontoProvision" />
+                <ScalarProperty Name="Acreedor" ColumnName="Acreedor" />
+                <ScalarProperty Name="Grupo" ColumnName="Grupo" />
+                <ScalarProperty Name="Concepto" ColumnName="Concepto" />
+                <ScalarProperty Name="Indat" ColumnName="Indat" />
+                <ScalarProperty Name="CuentaContable" ColumnName="CuentaContable" />
+                <ScalarProperty Name="NumeroProvision" ColumnName="NumeroProvision" />
+                <ScalarProperty Name="BanderaConcepto" ColumnName="BanderaConcepto" />
+                <ScalarProperty Name="IdCancelacionCosto" ColumnName="IdCancelacionCosto" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="RoamingDocumentoCosto">
+            <EntityTypeMapping TypeName="ICPruebaModel.RoamingDocumentoCosto">
+              <MappingFragment StoreEntitySet="RoamingDocumentoCosto">
+                <ScalarProperty Name="FechaCarga" ColumnName="FechaCarga" />
+                <ScalarProperty Name="LineaNegocio" ColumnName="LineaNegocio" />
+                <ScalarProperty Name="Activo" ColumnName="Activo" />
+                <ScalarProperty Name="NumeroDocumentoSap" ColumnName="NumeroDocumentoSap" />
+                <ScalarProperty Name="ClaseDocumentoSap" ColumnName="ClaseDocumentoSap" />
+                <ScalarProperty Name="ClaseDocumento" ColumnName="ClaseDocumento" />
+                <ScalarProperty Name="CuentaContable" ColumnName="CuentaContable" />
+                <ScalarProperty Name="MontoMxn" ColumnName="MontoMxn" />
+                <ScalarProperty Name="TipoCambio" ColumnName="TipoCambio" />
+                <ScalarProperty Name="FolioDocumento" ColumnName="FolioDocumento" />
+                <ScalarProperty Name="FechaFactura" ColumnName="FechaFactura" />
+                <ScalarProperty Name="MontoFacturado" ColumnName="MontoFacturado" />
+                <ScalarProperty Name="Monto" ColumnName="Monto" />
+                <ScalarProperty Name="Tarifa" ColumnName="Tarifa" />
+                <ScalarProperty Name="Minutos" ColumnName="Minutos" />
+                <ScalarProperty Name="Moneda" ColumnName="Moneda" />
+                <ScalarProperty Name="PorcentajeIva" ColumnName="PorcentajeIva" />
+                <ScalarProperty Name="Iva" ColumnName="Iva" />
+                <ScalarProperty Name="Trafico" ColumnName="Trafico" />
+                <ScalarProperty Name="Material" ColumnName="Material" />
+                <ScalarProperty Name="Acreedor" ColumnName="Acreedor" />
+                <ScalarProperty Name="NombreOperador" ColumnName="NombreOperador" />
+                <ScalarProperty Name="IdOperador" ColumnName="IdOperador" />
+                <ScalarProperty Name="Grupo" ColumnName="Grupo" />
+                <ScalarProperty Name="Servicio" ColumnName="Servicio" />
+                <ScalarProperty Name="Compania" ColumnName="Compania" />
+                <ScalarProperty Name="FechaConsumo" ColumnName="FechaConsumo" />
+                <ScalarProperty Name="FechaContable" ColumnName="FechaContable" />
+                <ScalarProperty Name="Anio" ColumnName="Anio" />
+                <ScalarProperty Name="IdDocumentoCosto" ColumnName="IdDocumentoCosto" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>
