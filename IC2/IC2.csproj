@@ -5761,6 +5761,7 @@
     <Content Include="Views\FluctuacionCostosROM\Index.cshtml" />
     <Content Include="Views\FluctuacionIngresosROM\Index.cshtml" />
     <Content Include="Views\RoamingDocumentoCosto\Index.cshtml" />
+    <Content Include="Views\RoamingCancelacionCosto\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -5822,7 +5823,6 @@
     <Folder Include="Content\resources\images\slate\window\.svn\tmp\text-base\" />
     <Folder Include="Views\Default\" />
     <Folder Include="Views\FuncionesGenerales\" />
-    <Folder Include="Views\RoamingCancelacionCosto\" />
     <Folder Include="Views\Seguridad\" />
   </ItemGroup>
   <ItemGroup>
