@@ -255,6 +255,7 @@
     <Compile Include="Controllers\PXQSMSLDIController.cs" />
     <Compile Include="Controllers\ReportesGestionController.cs" />
     <Compile Include="Controllers\ReportesDevengoController.cs" />
+    <Compile Include="Controllers\RoamingCancelacionCostoController.cs" />
     <Compile Include="Controllers\RoamingDocumentoCostoController.cs" />
     <Compile Include="Controllers\SeguridadController.cs" />
     <Compile Include="Controllers\ServicioController.cs" />
@@ -5821,6 +5822,7 @@
     <Folder Include="Content\resources\images\slate\window\.svn\tmp\text-base\" />
     <Folder Include="Views\Default\" />
     <Folder Include="Views\FuncionesGenerales\" />
+    <Folder Include="Views\RoamingCancelacionCosto\" />
     <Folder Include="Views\Seguridad\" />
   </ItemGroup>
   <ItemGroup>
