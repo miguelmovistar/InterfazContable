@@ -17,7 +17,16 @@ namespace IC2.Controllers
         // GET: RoamingCancelacionCosto
         public ActionResult Index()
         {
-            return View();
+            HomeController oHome = new HomeController();
+            ViewBag.Linea = "Linea";
+            ViewBag.IdLinea = (int)Session["IdLinea"];
+            List<Submenu> lista = new List<Submenu>();
+            List<Menu> listaMenu = new List<Menu>();
+            lista = oHome.obtenerMenu((int)Session["IdLinea"]);
+            listaMenu = oHome.obtenerMenuPrincipal((int)Session["IdLinea"]);
+            ViewBag.Lista = lista;
+            ViewBag.ListaMenu = listaMenu;
+            return View(ViewBag);
         }
 
         public JsonResult cargarCSV(HttpPostedFileBase archivoCSV, int lineaNegocio)
@@ -151,6 +160,151 @@ namespace IC2.Controllers
                     status = status
                 };
             }
+            return Json(respuesta, JsonRequestBehavior.AllowGet);
+        }
+
+        public JsonResult LlenaPeriodo(int lineaNegocio, int start, int limit)
+        {
+            List<object> lista = new List<object>();
+            object respuesta = null;
+            int total;
+            string _LineaNegocio = lineaNegocio.ToString();
+
+            try
+            {
+                var datos = (from periodos in db.datosTraficoTAPINA
+                             group periodos by periodos.settlementDate into g
+                             orderby g.Key ascending
+                             select new
+                             {
+                                 Id = g.Key,
+                                 Periodo = g.Key
+                             }).FirstOrDefault();
+
+                DateTime _Fecha = DateTime.Parse(datos.Periodo.ToString());
+
+                lista.Add(new
+                {
+                    Id = _Fecha,
+                    Periodo = _Fecha.Year + "-" + (_Fecha.AddMonths(1).Month.ToString("d2")) + "-" + _Fecha.Day,
+                    Fecha = _Fecha.Year + " " + meses[(_Fecha.AddMonths(1).Month)]
+                });
+
+                total = lista.Count();
+                respuesta = new { success = true, results = lista, total = total };
+            }
+            catch (Exception e)
+            {
+                lista = null;
+                respuesta = new { success = false, results = e.Message };
+            }
+
+            return Json(respuesta, JsonRequestBehavior.AllowGet);
+        }
+
+        IDictionary<int, string> meses = new Dictionary<int, string>() {
+            {1, "ENERO"}, {2, "FEBRERO"},
+            {3, "MARZO"}, {4, "ABRIL"},
+            {5, "MAYO"}, {6, "JUNIO"},
+            {7, "JULIO"}, {8, "AGOSTO"},
+            {9, "SEPTIEMBRE"}, {10, "OCTUBRE"},
+            {11, "NOVIEMBRE"}, {12, "DICIEMBRE"}
+        };
+
+        public JsonResult LlenaGrid(int? lineaNegocio, DateTime Periodo, int start, int limit)
+        {
+            object respuesta = null;
+            List<object> lista = new List<object>();
+            int total = 0;
+            DateTime periodo = DateTime.Now;
+
+            string mes = Periodo.Month.ToString().Length == 1 ? "0" + Periodo.Month.ToString() : Periodo.Month.ToString();
+            string anio = Periodo.Year.ToString();
+
+            try
+            {
+                var JoinQuery =
+                    from C in db.RoamingCancelacionCosto
+                    join D in db.RoamingDocumentoCosto on C.FolioDocumento equals D.FolioDocumento
+                    where C.FechaCarga.Month == periodo.Month &&
+                                C.FechaCarga.Year == periodo.Year &&
+                                C.LineaNegocio == "1"
+                    orderby C.FolioDocumento ascending
+                    select new
+                    {
+                        C.BanderaConcepto,
+                        C.NumeroProvision,
+                        C.CuentaContable,
+                        C.Indat,
+                        C.Concepto,
+                        C.Grupo,
+                        C.Acreedor,
+                        C.MontoProvision,
+                        C.Moneda,
+                        C.Periodo,
+                        C.Tipo,
+                        C.NumeroDocumentoSap,
+                        C.FolioDocumento,
+                        C.TipoCambioProvision,
+                        C.ImporteMxn,
+                        C.ImporteFactura,
+                        C.DiferenciaProvisionFactura,
+                        C.TipoCambioFactura,
+                        C.ExcesoProvisionMxn,
+                        C.InsuficienciaProvisionMxn,
+                        D.FechaConsumo,
+                        D.TipoCambio,
+                        D.MontoFacturado
+                    };
+
+                string MontoFacturado = "", FechaConsumo = "", TipoCambio = "";
+                foreach (var elemento in JoinQuery)
+                {
+                    if (elemento.ImporteFactura == "")
+                    {
+                        MontoFacturado = elemento.MontoFacturado;
+                        FechaConsumo = elemento.FechaConsumo;
+                        TipoCambio = elemento.TipoCambio;
+                    }
+
+                    lista.Add(new
+                    {
+                        elemento.BanderaConcepto,
+                        elemento.NumeroProvision,
+                        elemento.CuentaContable,
+                        elemento.Indat,
+                        elemento.Concepto,
+                        elemento.Grupo,
+                        elemento.Acreedor,
+                        elemento.MontoProvision,
+                        elemento.Moneda,
+                        elemento.Periodo,
+                        elemento.Tipo,
+                        elemento.NumeroDocumentoSap,
+                        elemento.FolioDocumento,
+                        elemento.TipoCambioProvision,
+                        elemento.ImporteMxn,
+                        elemento.ImporteFactura,
+                        elemento.DiferenciaProvisionFactura,
+                        elemento.TipoCambioFactura,
+                        elemento.ExcesoProvisionMxn,
+                        elemento.InsuficienciaProvisionMxn,
+                        FechaConsumo,
+                        TipoCambio,
+                        MontoFacturado
+                    });
+                }
+
+                total = lista.Count();
+                lista = lista.Skip(start).Take(limit).ToList();
+                respuesta = new { results = lista, start = start, limit = limit, total = total, succes = true };
+
+            }
+            catch (Exception e)
+            {
+                respuesta = new { success = false, results = e.Message };
+            }
+
             return Json(respuesta, JsonRequestBehavior.AllowGet);
         }
 

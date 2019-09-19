@@ -757,6 +757,7 @@
     <Content Include="Content\js\IC\DataOrigen\DocumentosCosto\DocumentosCosto.js" />
     <Content Include="Content\js\IC\DataOrigen\LDI\DataCosto.js" />
     <Content Include="Content\js\IC\DataOrigen\LDI\DataIngreso.js" />
+    <Content Include="Content\js\IC\DataOrigen\RoamingCancelacionCosto\RoamingCancelacionCosto.js" />
     <Content Include="Content\js\IC\DataOrigen\ROAMING\CargarDatosRoaming.js" />
     <Content Include="Content\js\IC\DataOrigen\DatosMVNO.js" />
     <Content Include="Content\js\IC\DataOrigen\ROAMING\DatosROM.js" />
