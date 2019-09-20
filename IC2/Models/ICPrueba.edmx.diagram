@@ -150,6 +150,7 @@
         <AssociationConnector Association="ICPruebaModel.FK_Tarifa_Fee_Trafico" ManuallyRouted="false" />
         <EntityTypeShape EntityType="ICPruebaModel.RoamingCancelacionCosto" Width="1.5" PointX="37.375" PointY="22.75" />
         <EntityTypeShape EntityType="ICPruebaModel.RoamingDocumentoCosto" Width="1.5" PointX="25.375" PointY="37.75" />
+        <EntityTypeShape EntityType="ICPruebaModel.RoamingCancelacionIngreso" Width="1.5" PointX="27.375" PointY="37.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

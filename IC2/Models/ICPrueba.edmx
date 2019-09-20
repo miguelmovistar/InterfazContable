@@ -2158,6 +2158,34 @@ advertencia 6002: La tabla o vista 'ICPrueba.dbo.PROVTARIFA_MesAnteriorROM' no t
           <Property Name="LineaNegocio" Type="varchar" MaxLength="1" />
           <Property Name="FechaCarga" Type="datetime" Nullable="false" />
         </EntityType>
+        <EntityType Name="RoamingCancelacionIngreso">
+          <Key>
+            <PropertyRef Name="IdCancelacionIngreso" />
+          </Key>
+          <Property Name="IdCancelacionIngreso" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="BanderaConcepto" Type="varchar" MaxLength="100" />
+          <Property Name="NumeroProvision" Type="varchar" MaxLength="100" />
+          <Property Name="IdOperador" Type="varchar" MaxLength="100" />
+          <Property Name="Concepto" Type="varchar" MaxLength="100" />
+          <Property Name="Grupo" Type="varchar" MaxLength="100" />
+          <Property Name="Deudor" Type="varchar" MaxLength="100" />
+          <Property Name="MontoProvision" Type="varchar" MaxLength="100" />
+          <Property Name="Moneda" Type="varchar" MaxLength="100" />
+          <Property Name="Periodo" Type="varchar" MaxLength="100" />
+          <Property Name="Tipo" Type="varchar" MaxLength="100" />
+          <Property Name="NumeroDocumentoSap" Type="varchar" MaxLength="100" />
+          <Property Name="FolioDocumento" Type="varchar" MaxLength="100" />
+          <Property Name="TipoCambioProvision" Type="varchar" MaxLength="100" />
+          <Property Name="ImporteMxn" Type="varchar" MaxLength="100" />
+          <Property Name="ImporteFactura" Type="varchar" MaxLength="100" />
+          <Property Name="DiferenciaProvisionFactura" Type="varchar" MaxLength="100" />
+          <Property Name="TipoCambioFactura" Type="varchar" MaxLength="100" />
+          <Property Name="ExcesoProvisionMxn" Type="varchar" MaxLength="100" />
+          <Property Name="InsuficienciaProvisionMxn" Type="varchar" MaxLength="100" />
+          <Property Name="Activo" Type="varchar" MaxLength="1" />
+          <Property Name="LineaNegocio" Type="varchar" MaxLength="1" />
+          <Property Name="FechaCarga" Type="datetime" Nullable="false" />
+        </EntityType>
         <EntityType Name="RoamingDocumentoCosto">
           <Key>
             <PropertyRef Name="IdDocumentoCosto" />
@@ -3215,6 +3243,7 @@ advertencia 6002: La tabla o vista 'ICPrueba.dbo.v_ingresos' no tiene definida n
           <EntitySet Name="PXQIngresosROM_B" EntityType="Self.PXQIngresosROM_B" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="PXQSMSLDI" EntityType="Self.PXQSMSLDI" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="RoamingCancelacionCosto" EntityType="Self.RoamingCancelacionCosto" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="RoamingCancelacionIngreso" EntityType="Self.RoamingCancelacionIngreso" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="RoamingDocumentoCosto" EntityType="Self.RoamingDocumentoCosto" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Servicio" EntityType="Self.Servicio" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Sociedad" EntityType="Self.Sociedad" Schema="dbo" store:Type="Tables" />
@@ -7139,6 +7168,7 @@ advertencia 6002: La tabla o vista 'ICPrueba.dbo.v_ingresos' no tiene definida n
           </FunctionImport>
           <EntitySet Name="RoamingCancelacionCosto" EntityType="ICPruebaModel.RoamingCancelacionCosto" />
           <EntitySet Name="RoamingDocumentoCosto" EntityType="ICPruebaModel.RoamingDocumentoCosto" />
+          <EntitySet Name="RoamingCancelacionIngreso" EntityType="ICPruebaModel.RoamingCancelacionIngreso" />
         </EntityContainer>
         <ComplexType Name="sp_cancelacionCostoROM_Result">
           <Property Type="Decimal" Name="RESULTADO" Nullable="true" Precision="23" Scale="6" />
@@ -7379,6 +7409,34 @@ advertencia 6002: La tabla o vista 'ICPrueba.dbo.v_ingresos' no tiene definida n
           <Property Name="ClaseDocumento" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="ClaseDocumentoSap" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="NumeroDocumentoSap" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Activo" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="LineaNegocio" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="FechaCarga" Type="DateTime" Nullable="false" Precision="3" />
+        </EntityType>
+        <EntityType Name="RoamingCancelacionIngreso">
+          <Key>
+            <PropertyRef Name="IdCancelacionIngreso" />
+          </Key>
+          <Property Name="IdCancelacionIngreso" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="BanderaConcepto" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="NumeroProvision" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="IdOperador" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Concepto" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Grupo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Deudor" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="MontoProvision" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Moneda" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Periodo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Tipo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="NumeroDocumentoSap" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="FolioDocumento" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="TipoCambioProvision" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="ImporteMxn" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="ImporteFactura" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="DiferenciaProvisionFactura" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="TipoCambioFactura" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="ExcesoProvisionMxn" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="InsuficienciaProvisionMxn" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="Activo" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
           <Property Name="LineaNegocio" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
           <Property Name="FechaCarga" Type="DateTime" Nullable="false" Precision="3" />
@@ -10176,6 +10234,35 @@ advertencia 6002: La tabla o vista 'ICPrueba.dbo.v_ingresos' no tiene definida n
                 <ScalarProperty Name="FechaContable" ColumnName="FechaContable" />
                 <ScalarProperty Name="Anio" ColumnName="Anio" />
                 <ScalarProperty Name="IdDocumentoCosto" ColumnName="IdDocumentoCosto" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="RoamingCancelacionIngreso">
+            <EntityTypeMapping TypeName="ICPruebaModel.RoamingCancelacionIngreso">
+              <MappingFragment StoreEntitySet="RoamingCancelacionIngreso">
+                <ScalarProperty Name="FechaCarga" ColumnName="FechaCarga" />
+                <ScalarProperty Name="LineaNegocio" ColumnName="LineaNegocio" />
+                <ScalarProperty Name="Activo" ColumnName="Activo" />
+                <ScalarProperty Name="InsuficienciaProvisionMxn" ColumnName="InsuficienciaProvisionMxn" />
+                <ScalarProperty Name="ExcesoProvisionMxn" ColumnName="ExcesoProvisionMxn" />
+                <ScalarProperty Name="TipoCambioFactura" ColumnName="TipoCambioFactura" />
+                <ScalarProperty Name="DiferenciaProvisionFactura" ColumnName="DiferenciaProvisionFactura" />
+                <ScalarProperty Name="ImporteFactura" ColumnName="ImporteFactura" />
+                <ScalarProperty Name="ImporteMxn" ColumnName="ImporteMxn" />
+                <ScalarProperty Name="TipoCambioProvision" ColumnName="TipoCambioProvision" />
+                <ScalarProperty Name="FolioDocumento" ColumnName="FolioDocumento" />
+                <ScalarProperty Name="NumeroDocumentoSap" ColumnName="NumeroDocumentoSap" />
+                <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+                <ScalarProperty Name="Periodo" ColumnName="Periodo" />
+                <ScalarProperty Name="Moneda" ColumnName="Moneda" />
+                <ScalarProperty Name="MontoProvision" ColumnName="MontoProvision" />
+                <ScalarProperty Name="Deudor" ColumnName="Deudor" />
+                <ScalarProperty Name="Grupo" ColumnName="Grupo" />
+                <ScalarProperty Name="Concepto" ColumnName="Concepto" />
+                <ScalarProperty Name="IdOperador" ColumnName="IdOperador" />
+                <ScalarProperty Name="NumeroProvision" ColumnName="NumeroProvision" />
+                <ScalarProperty Name="BanderaConcepto" ColumnName="BanderaConcepto" />
+                <ScalarProperty Name="IdCancelacionIngreso" ColumnName="IdCancelacionIngreso" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

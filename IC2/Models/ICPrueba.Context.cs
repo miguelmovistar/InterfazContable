@@ -138,6 +138,7 @@ namespace IC2.Models
         public virtual DbSet<v_ingresos> v_ingresos { get; set; }
         public virtual DbSet<RoamingCancelacionCosto> RoamingCancelacionCosto { get; set; }
         public virtual DbSet<RoamingDocumentoCosto> RoamingDocumentoCosto { get; set; }
+        public virtual DbSet<RoamingCancelacionIngreso> RoamingCancelacionIngreso { get; set; }
     
         [DbFunction("ICPruebaEntities", "fSepararCadenas")]
         public virtual IQueryable<fSepararCadenas_Result> fSepararCadenas(string pCadena, string pDelimitador)
