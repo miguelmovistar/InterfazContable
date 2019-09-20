@@ -258,6 +258,7 @@
     <Compile Include="Controllers\RoamingCancelacionCostoController.cs" />
     <Compile Include="Controllers\RoamingCancelacionIngresoController.cs" />
     <Compile Include="Controllers\RoamingDocumentoCostoController.cs" />
+    <Compile Include="Controllers\RoamingDocumentoIngresoController.cs" />
     <Compile Include="Controllers\SeguridadController.cs" />
     <Compile Include="Controllers\ServicioController.cs" />
     <Compile Include="Controllers\SociedadController.cs" />
@@ -5830,6 +5831,7 @@
     <Folder Include="Content\resources\images\slate\window\.svn\tmp\text-base\" />
     <Folder Include="Views\Default\" />
     <Folder Include="Views\FuncionesGenerales\" />
+    <Folder Include="Views\RoamingDocumentoIngreso\" />
     <Folder Include="Views\Seguridad\" />
   </ItemGroup>
   <ItemGroup>
