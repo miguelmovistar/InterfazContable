@@ -597,6 +597,9 @@
     <Compile Include="Models\RoamingDocumentoCosto.cs">
       <DependentUpon>ICPrueba.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\RoamingDocumentoIngreso.cs">
+      <DependentUpon>ICPrueba.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\SABANA_PROV_TAR_ROM.cs">
       <DependentUpon>ICPrueba.tt</DependentUpon>
     </Compile>
