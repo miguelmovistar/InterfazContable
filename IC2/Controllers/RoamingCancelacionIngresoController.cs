@@ -222,36 +222,49 @@ namespace IC2.Controllers
 
             try
             {
-                var query = from cancela in db.RoamingCancelacionIngreso
-                            where cancela.FechaCarga.Month == periodo.Month &&
-                                cancela.FechaCarga.Year == periodo.Year &&
-                                cancela.LineaNegocio == "1"
+                var JoinQuery = from C in db.RoamingCancelacionIngreso
+                                join D in db.RoamingDocumentoIngreso on C.FolioDocumento equals D.FolioDocumento
+                                where C.FechaCarga.Month == periodo.Month &&
+                                C.FechaCarga.Year == periodo.Year &&
+                                C.LineaNegocio == "1"
+                                orderby C.FolioDocumento ascending
 
                     select new
                     {
-                        cancela.BanderaConcepto,
-                        cancela.NumeroProvision,
-                        cancela.IdOperador,
-                        cancela.Concepto,
-                        cancela.Grupo,
-                        cancela.Deudor,
-                        cancela.MontoProvision,
-                        cancela.Moneda,
-                        cancela.Periodo,
-                        cancela.Tipo,
-                        cancela.NumeroDocumentoSap,
-                        cancela.FolioDocumento,
-                        cancela.TipoCambioProvision,
-                        cancela.ImporteMxn,
-                        cancela.ImporteFactura,
-                        cancela.DiferenciaProvisionFactura,
-                        cancela.TipoCambioFactura,
-                        cancela.ExcesoProvisionMxn,
-                        cancela.InsuficienciaProvisionMxn
+                        C.BanderaConcepto,
+                        C.NumeroProvision,
+                        C.IdOperador,
+                        C.Concepto,
+                        C.Grupo,
+                        C.Deudor,
+                        C.MontoProvision,
+                        C.Moneda,
+                        C.Periodo,
+                        C.Tipo,
+                        C.NumeroDocumentoSap,
+                        C.FolioDocumento,
+                        C.TipoCambioProvision,
+                        C.ImporteMxn,
+                        C.ImporteFactura,
+                        C.DiferenciaProvisionFactura,
+                        C.TipoCambioFactura,
+                        C.ExcesoProvisionMxn,
+                        C.InsuficienciaProvisionMxn,
+                        D.FechaConsumo,
+                        D.TipoCambio,
+                        D.MontoFacturado
                     };
 
-                foreach (var elemento in query)
+                string MontoFacturado = "", FechaConsumo = "", TipoCambio = "";
+                foreach (var elemento in JoinQuery)
                 {
+
+                    if (elemento.ImporteFactura == "")
+                    {
+                        MontoFacturado = elemento.MontoFacturado;
+                        FechaConsumo = elemento.FechaConsumo;
+                        TipoCambio = elemento.TipoCambio;
+                    }
 
                     lista.Add(new
                     {
@@ -273,7 +286,10 @@ namespace IC2.Controllers
                         elemento.DiferenciaProvisionFactura,
                         elemento.TipoCambioFactura,
                         elemento.ExcesoProvisionMxn,
-                        elemento.InsuficienciaProvisionMxn
+                        elemento.InsuficienciaProvisionMxn,
+                        FechaConsumo,
+                        TipoCambio,
+                        MontoFacturado
                     });
                 }
 

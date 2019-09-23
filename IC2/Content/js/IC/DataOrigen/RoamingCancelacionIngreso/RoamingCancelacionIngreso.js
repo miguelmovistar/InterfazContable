@@ -904,6 +904,108 @@
                                                 }
                                             }
                                         }
+                                    },
+                                    { // Columna FechaConsumo
+                                        xtype: "gridcolumn", sortable: true, id: "FechaConsumo", dataIndex: 'FechaConsumo', text: "* Fecha Consumo", width: 120, align: 'right',
+                                        renderer: function (v, cellValues, rec) {
+                                            return rec.get('FechaConsumo');
+                                        },
+                                        editor: {
+                                            xtype: 'textfield'
+                                        },
+                                        items:
+                                        {
+                                            xtype: 'textfield',
+                                            flex: 1,
+                                            margin: 2,
+                                            enableKeyEvents: true,
+                                            listeners:
+                                            {
+                                                keyup: function () {
+                                                    _storebuscar.clearFilter();
+                                                    var cadena = this.value;
+                                                    if (this.value && cadena.length > 1) {
+                                                        _storebuscar.load({ params: { start: 0, limit: 100000 } });
+                                                        _storebuscar.filter({
+                                                            property: 'FechaConsumo',
+                                                            value: this.value,
+                                                            anyMatch: true,
+                                                            caseSensitive: false
+                                                        });
+                                                    } else {
+                                                        _storebuscar.clearFilter();
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    },
+                                    { // Columna TipoCambio
+                                        xtype: "gridcolumn", sortable: true, id: "TipoCambio", dataIndex: 'TipoCambio', text: "* Tipo Cambio", width: 120, align: 'right',
+                                        renderer: function (v, cellValues, rec) {
+                                            return rec.get('TipoCambio');
+                                        },
+                                        editor: {
+                                            xtype: 'textfield'
+                                        },
+                                        items:
+                                        {
+                                            xtype: 'textfield',
+                                            flex: 1,
+                                            margin: 2,
+                                            enableKeyEvents: true,
+                                            listeners:
+                                            {
+                                                keyup: function () {
+                                                    _storebuscar.clearFilter();
+                                                    var cadena = this.value;
+                                                    if (this.value && cadena.length > 1) {
+                                                        _storebuscar.load({ params: { start: 0, limit: 100000 } });
+                                                        _storebuscar.filter({
+                                                            property: 'TipoCambio',
+                                                            value: this.value,
+                                                            anyMatch: true,
+                                                            caseSensitive: false
+                                                        });
+                                                    } else {
+                                                        _storebuscar.clearFilter();
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    },
+                                    { // Columna MontoFacturado
+                                        xtype: "gridcolumn", sortable: true, id: "MontoFacturado", dataIndex: 'MontoFacturado', text: "* Monto Facturado", width: 120, align: 'right',
+                                        renderer: function (v, cellValues, rec) {
+                                            return rec.get('MontoFacturado');
+                                        },
+                                        editor: {
+                                            xtype: 'textfield'
+                                        },
+                                        items:
+                                        {
+                                            xtype: 'textfield',
+                                            flex: 1,
+                                            margin: 2,
+                                            enableKeyEvents: true,
+                                            listeners:
+                                            {
+                                                keyup: function () {
+                                                    _storebuscar.clearFilter();
+                                                    var cadena = this.value;
+                                                    if (this.value && cadena.length > 1) {
+                                                        _storebuscar.load({ params: { start: 0, limit: 100000 } });
+                                                        _storebuscar.filter({
+                                                            property: 'MontoFacturado',
+                                                            value: this.value,
+                                                            anyMatch: true,
+                                                            caseSensitive: false
+                                                        });
+                                                    } else {
+                                                        _storebuscar.clearFilter();
+                                                    }
+                                                }
+                                            }
+                                        }
                                     }
 
                                 ]
