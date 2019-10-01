@@ -18,7 +18,7 @@
         pageSize: 20,
         proxy: {
             type: 'ajax',
-            url: '../' + VIRTUAL_DIRECTORY + 'RoamingDocumentoCosto/LlenaPeriodo?lineaNegocio=' + 1,
+            url: '../' + VIRTUAL_DIRECTORY + 'RoamingDocumentoIngreso/LlenaPeriodo?lineaNegocio=' + 1,
             reader: {
                 type: 'json',
                 root: 'results',
@@ -70,7 +70,7 @@
         pageSize: 20,
         proxy: {
             type: 'ajax',
-            url: '../' + VIRTUAL_DIRECTORY + 'RoamingDocumentoCosto/LlenaGrid?lineaNegocio=1',
+            url: '../' + VIRTUAL_DIRECTORY + 'RoamingDocumentoIngreso/LlenaGrid?lineaNegocio=1',
             reader: {
                 type: 'json',
                 root: 'results',
@@ -139,7 +139,7 @@
         flex: 1,
         items: [
             {   // Encabezado
-                html: "<div style='font-size:25px';>Documentos Costo</div><br/>",
+                html: "<div style='font-size:25px';>Documentos Ingreso</div><br/>",
                 border: false,
                 bodyStyle: { "background-color": "#E6E6E6" },
                 width: '50%',
@@ -219,7 +219,7 @@
                                             store.load();
                                         },
                                     }
-                                    
+
                                 ]
                             },
                             {   // Filas del Grid
@@ -513,10 +513,10 @@
                                             }
                                         }
                                     },
-                                    { // Columna Acreedor
-                                        xtype: "gridcolumn", sortable: true, id: "Acreedor", dataIndex: 'Acreedor', text: "Acreedor", width: 120,
+                                    { // Columna Deudor
+                                        xtype: "gridcolumn", sortable: true, id: "Deudor", dataIndex: 'Deudor', text: "Deudor", width: 120,
                                         renderer: function (v, cellValues, rec) {
-                                            return rec.get('Acreedor');
+                                            return rec.get('Deudor');
                                         },
                                         editor: {
                                             xtype: 'textfield'
@@ -535,7 +535,7 @@
                                                     if (this.value && cadena.length > 1) {
                                                         _storebuscar.load({ params: { start: 0, limit: 100000 } });
                                                         _storebuscar.filter({
-                                                            property: 'Acreedor',
+                                                            property: 'Deudor',
                                                             value: this.value,
                                                             anyMatch: true,
                                                             caseSensitive: false

@@ -768,6 +768,7 @@
     <Content Include="Content\js\IC\DataOrigen\RoamingCancelacionCosto\RoamingCancelacionCosto.js" />
     <Content Include="Content\js\IC\DataOrigen\RoamingCancelacionIngreso\RoamingCancelacionIngreso.js" />
     <Content Include="Content\js\IC\DataOrigen\RoamingDocumentoCosto\RoamingDocumentoCosto.js" />
+    <Content Include="Content\js\IC\DataOrigen\RoamingDocumentoIngreso\RoamingDocumentoIngreso.js" />
     <Content Include="Content\js\IC\DataOrigen\ROAMING\CargarDatosRoaming.js" />
     <Content Include="Content\js\IC\DataOrigen\DatosMVNO.js" />
     <Content Include="Content\js\IC\DataOrigen\ROAMING\DatosROM.js" />
@@ -5774,6 +5775,7 @@
     <Content Include="Views\RoamingDocumentoCosto\Index.cshtml" />
     <Content Include="Views\RoamingCancelacionCosto\Index.cshtml" />
     <Content Include="Views\RoamingCancelacionIngreso\Index.cshtml" />
+    <Content Include="Views\RoamingDocumentoIngreso\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -5835,7 +5837,6 @@
     <Folder Include="Content\resources\images\slate\window\.svn\tmp\text-base\" />
     <Folder Include="Views\Default\" />
     <Folder Include="Views\FuncionesGenerales\" />
-    <Folder Include="Views\RoamingDocumentoIngreso\" />
     <Folder Include="Views\Seguridad\" />
   </ItemGroup>
   <ItemGroup>
