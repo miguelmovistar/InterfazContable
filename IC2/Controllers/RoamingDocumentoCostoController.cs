@@ -55,6 +55,13 @@ namespace IC2.Controllers
                 }
                 lineas = csvData.Skip(1);
 
+                var datos = (from periodos in db.cargaDocumentoRoaming
+                             where periodos.idDocumento == "TAPIN" & periodos.ordenCarga == "A" & periodos.estatusCarga == "PC"
+                             group periodos by periodos.periodoCarga into g
+                             orderby g.Key ascending
+                             select new
+                             { Id = g.Key, Periodo = g.Key}).FirstOrDefault();
+
                 using (TransactionScope scope = new TransactionScope())
                 {
                     foreach (string ln in lineas)
@@ -64,6 +71,7 @@ namespace IC2.Controllers
                         //var lineaSplit = linea.Split(';');
                         var lineaSplit = linea.Split('|');
                         ++lineaActual;
+
                         if (lineaSplit.Count() == 26)
                         {
 
@@ -71,11 +79,8 @@ namespace IC2.Controllers
 
                             try
                             {
-                                ope = lineaSplit[6];
-                                fact = lineaSplit[19];
-
                                 entidad.Anio = lineaSplit[0];
-                                entidad.FechaContable = lineaSplit[1];
+                                entidad.FechaContable = datos.Periodo.ToString(); //lineaSplit[1];
                                 entidad.FechaConsumo = lineaSplit[2];
                                 entidad.Compania = lineaSplit[3];
                                 entidad.Servicio = lineaSplit[4];
@@ -182,22 +187,20 @@ namespace IC2.Controllers
 
             try
             {
-                var datos = (from periodos in db.datosTraficoTAPINA
-                             group periodos by periodos.settlementDate into g
+                var datos = (from periodos in db.cargaDocumentoRoaming
+                             where periodos.idDocumento == "TAPIN" & periodos.ordenCarga == "A" & periodos.estatusCarga == "PC"
+                             group periodos by periodos.periodoCarga into g
                              orderby g.Key ascending
                              select new
-                             {
-                                 Id = g.Key,
-                                 Periodo = g.Key
-                             }).FirstOrDefault();
+                             { Id = g.Key, Periodo = g.Key }).FirstOrDefault();
 
                 DateTime _Fecha = DateTime.Parse(datos.Periodo.ToString());
 
                 lista.Add(new
                 {
                     Id = _Fecha,
-                    Periodo = _Fecha.Year + "-" + (_Fecha.AddMonths(1).Month.ToString("d2")) + "-" + _Fecha.Day,
-                    Fecha = _Fecha.Year + " " + meses[(_Fecha.AddMonths(1).Month)]
+                    Periodo = _Fecha.Year + "-" + (_Fecha.Month.ToString("d2")) + "-" + _Fecha.Day,
+                    Fecha = _Fecha.Year + " " + meses[(_Fecha.Month)]
                 });
 
                 total = lista.Count();
@@ -233,8 +236,8 @@ namespace IC2.Controllers
             try
             {
                 var JoinQuery = from C in db.RoamingDocumentoCosto
-                                where C.FechaCarga.Month == Periodo.Month &&
-                                C.FechaCarga.Year == Periodo.Year &&
+                                where C.FechaContable.Substring(5,2) == mes &&
+                                C.FechaContable.Substring(0, 4) == anio &&
                                 C.LineaNegocio == "1"
                                 orderby C.FolioDocumento ascending
 
