@@ -226,8 +226,8 @@ namespace IC2.Controllers
                 var JoinQuery =
                     from C in db.RoamingCancelacionCosto
                     join D in db.RoamingDocumentoCosto on C.FolioDocumento equals D.FolioDocumento
-                    where C.FechaCarga.Month == periodo.Month &&
-                                C.FechaCarga.Year == periodo.Year &&
+                    where C.FechaCarga.Month == Periodo.Month &&
+                                C.FechaCarga.Year == Periodo.Year &&
                                 C.LineaNegocio == "1"
                     orderby C.FolioDocumento ascending
                     select new

@@ -178,7 +178,7 @@ namespace IC2.Controllers
 
             try
             {
-                var datos = (from periodos in db.datosTraficoTAPOUTB
+                var datos = (from periodos in db.datosTraficoTAPOUTA
                              group periodos by periodos.settlementDate into g
                              orderby g.Key ascending
                              select new
